@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body class="column">
+
+  <h1> SPLI </h1>
+
+  <h1> TIER </h1>
+
+  <section>
+
+    <main class="column">
+
+      <form>
+
+        <legend> Bill </legend>
+    
+        <input type="number" id="billInput">
+    
+      </form>
+    
+      <form>
+    
+        <legend> Select Tip % </legend>
+    
+        <div>
+    
+          <button type="button"> 5% </button>
+    
+          <button type="button"> 10% </button>
+    
+          <button class="pressed" type="button"> 15% </button>
+    
+          <button type="button"> 25% </button>
+    
+          <button type="button"> 50% </button>
+    
+          <button id="customButton" type="button"> Custom </button>
+    
+        </div>
+    
+      </form>
+    
+      <form>
+    
+        <legend> Number of People </legend>
+    
+        <input type="number" id="peopleInput">
+    
+      </form>
+
+    </main>
+  
+    <footer class="column">
+  
+      <div class="row">
+  
+        <div class="column">
+  
+          <legend> Tip Amount </legend>
+  
+          <span> / person </span>
+  
+        </div>
+  
+        <h1 id="displaysTipAmount"></h1>
+  
+      </div>
+  
+      <div class="row">
+  
+        <div class="column">
+  
+          <legend> Total </legend>
+  
+          <span> / person </span>
+  
+        </div>
+  
+        <h1 id="displaysTotal"></h1>
+  
+      </div>
+  
+      <button onclick="Reset()" type="button"> Reset </button>
+  
+    </footer>
+
+  </section>
+  
+  <div class="attribution column">
+
+     <h3> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </h3>
+
+     <h3> Coded by <a href="https://github.com/Guilherme-Porto-Silva/">Guigui-chan</a>. </h3>
+
+  </div>
+
+  <script src="./engine.js"></script>
+
+ </body>
+</html>

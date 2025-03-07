@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    padding: 2px;
+    overflow-wrap: break-word;
+}
+
+section, form, .column, .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+section{
+    width: 100%;
+    padding: 5%;
+    background-color: hsl(0, 0%, 100%);
+}
+
+section, footer{ border-radius: 10%; }
+
+input, h1, legend, #customButton{ color: hsl(183, 100%, 15%); }
+
+input, #customButton{ background-color: hsl(185, 41%, 84%); }
+
+input{ font-size: 1.5rem; }
+
+input, form, form div{ width: 100%; }
+
+form{
+
+    align-items: flex-start;
+    gap: 5px;
+
+    div{
+          display: grid;
+          grid-template-columns: 50% 50%;
+          gap: 0.5rem;
+
+       button{
+            background-color: hsl(183, 100%, 15%);
+            color: hsl(0, 0%, 100%);
+            padding: 0.5rem;
+            font-size: 110%;
+        }
+    }
+}
+  
+footer{
+
+    background-color: hsl(183, 100%, 15%);
+    padding: 15px;
+
+    h1{
+        font-size: 110%;
+        color: hsl(172, 67%, 45%);
+    }
+
+    button{
+        background-color: hsl(172, 67%, 45%);
+        color: hsl(183, 100%, 15%);
+        padding: 1rem;
+        font-size: 110%;
+    }
+
+    legend{ color: hsl(0, 0%, 100%); }
+
+    span{ color: hsl(184, 14%, 56%); }
+}
+  
+main, footer{ width: 50%; }
+
+button{
+    border-radius: 5mm;
+    cursor: pointer;
+}
+
+button:hover, #customButton:hover{
+    background-color: lime;
+    color: black;
+    transition: 0.3s;
+}
+
+a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    transition: 0.3s;
+}
+
+.row{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pressed{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+@media screen and (min-width: 1440px) {
+
+    *{ font-size: large; }
+
+    h1{ font-size: larger; }
+
+    section{
+        width: calc(80% + 1rem);
+        margin: 5%;
+        padding: 2%;
+        flex-direction: row;
+        gap: 50px;
+        border-radius: 10mm;
+    }
+
+    form div{ gap: 1rem; }
+
+    footer.column{
+
+        justify-content: space-between;
+        padding: 5%;
+        border-radius: 2%;
+
+        button{
+            font-size: 200%;
+            margin: 20px;
+        }
+    }
+}
