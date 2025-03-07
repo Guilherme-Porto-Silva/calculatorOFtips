@@ -4,12 +4,14 @@
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    font-size: large;
 }
 
 body{
     background-color: hsl(185, 41%, 84%);
     padding: 2px;
     overflow-wrap: break-word;
+    height: 100vh;
 }
 
 section, form, .column, .row{
@@ -112,20 +114,17 @@ a:hover {
 
 @media screen and (min-width: 1440px) {
 
-    *{ font-size: large; }
-
-    h1{ font-size: larger; }
+    *{ font-size: larger; }
 
     section{
         width: calc(80% + 1rem);
-        margin: 5%;
         padding: 2%;
         flex-direction: row;
         gap: 50px;
         border-radius: 10mm;
     }
 
-    form div{ gap: 1rem; }
+    form div{ gap: 15px; }
 
     footer.column{
 
