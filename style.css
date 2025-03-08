@@ -30,11 +30,13 @@ section{
 
 section, footer{ border-radius: 10%; }
 
-input, h1, legend, #customButton{ color: hsl(183, 100%, 15%); }
+input{
+    font-size: 1.5rem;
+    background-color: hsl(185, 41%, 84%);
+    text-align: right;
+}
 
-input, #customButton{ background-color: hsl(185, 41%, 84%); }
-
-input{ font-size: 1.5rem; }
+input, h1, legend{ color: hsl(183, 100%, 15%); }
 
 input, form, form div{ width: 100%; }
 
@@ -54,6 +56,16 @@ form{
             padding: 0.5rem;
             font-size: 110%;
         }
+    }
+
+     div.row{
+             display: flex;
+             gap: 0;
+
+       img{
+            position: relative;
+            left: 5%;
+         }
     }
 }
   
@@ -86,7 +98,7 @@ button{
     cursor: pointer;
 }
 
-button:hover, #customButton:hover{
+button:hover{
     background-color: lime;
     color: black;
     transition: 0.3s;
@@ -110,6 +122,18 @@ a:hover {
 .pressed{
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
+}
+
+#customButton{
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+
+    form div.row img{ left: 10%; }
+
+    input{ font-size: 0.8rem; }
 }
 
 @media screen and (min-width: 1440px) {
