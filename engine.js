@@ -1,16 +1,24 @@
-let selectedTip = 0;
-
-function SelectTip (tip) { selectedTip = tip; }
-
-
-
 const tipAmountDisplayer = document.getElementById("displaysTipAmount");
 
 const totalDisplayer = document.getElementById("displaysTotal");
 
+const customButton = document.getElementById("customButton");
+
+const billInput = document.getElementById("billInput");
+
+const peopleInput = document.getElementById("peopleInput");
+
 const buttons = Array.from(document.querySelectorAll("button"));
 
 const inputs = Array.from(document.querySelectorAll("input"));
+
+let selectedTip = 0;
+
+
+
+function SelectTip (tip) { selectedTip = tip; }
+
+
 
 function Reset() {
 
@@ -25,11 +33,15 @@ function Reset() {
     inputs.forEach(input => {
         input.value = null;
     });
+
+    customButton.classList.remove("pressed");
 }
 
 
 
 function selectedButton(clicked) {
+
+    customButton.classList.remove("pressed");
 
     buttons.forEach(button => {
         button.classList.remove("pressed");
@@ -50,9 +62,6 @@ buttons.forEach((button, index) => {
 
 
 
-const billInput = document.getElementById("billInput");
-
-const peopleInput = document.getElementById("peopleInput");
 
 function calculator() {
 
@@ -69,26 +78,19 @@ peopleInput.addEventListener("input", calculator);
 
 
 
-const customButton = document.getElementById("customButton");
 
 function customTip() {
 
-    const customValue = prompt("Enter custom tip percentage:");
-
-    const parsedValue = parseFloat(customValue);
+    const parsedValue = parseFloat(customButton.value);
     
     if (!isNaN(parsedValue) && parsedValue > 0) {
 
         selectedTip = parsedValue;
 
         buttons.forEach(button => button.classList.remove("pressed"));
-    }
 
-    buttons.forEach(button => {
-        button.classList.remove("pressed");
-    });
-
-    customButton.classList.add("pressed");
+       customButton.classList.add("pressed");
+   }
 }
 
-customButton.addEventListener("click", customTip);
+customButton.addEventListener("input", customTip);
