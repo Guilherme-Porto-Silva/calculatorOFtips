@@ -22,9 +22,9 @@ function SelectTip (tip) { selectedTip = tip; }
 
 function Reset() {
 
-    tipAmountDisplayer.textContent = "";
+    tipAmountDisplayer.textContent = "$0.00";
 
-    totalDisplayer.textContent = "";
+    totalDisplayer.textContent = "$0.00";
 
     buttons.forEach(button => {
         button.classList.remove("pressed");
