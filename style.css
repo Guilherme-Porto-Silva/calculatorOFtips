@@ -36,7 +36,7 @@ input{
     text-align: right;
 }
 
-input, h1, legend{ color: hsl(183, 100%, 15%); }
+input, h1, label, legend{ color: hsl(183, 100%, 15%); }
 
 input, form, form div{ width: 100%; }
 
